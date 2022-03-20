@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+
+    
+</head>
+<body>
+  
+    <script>
+        let i = 0;
+        while (i < 5) {
+        const userInput = prompt("Please choose 1 of the following: rock, paper, scissors");
+        const userSelection = userInput.toLowerCase();
+        const compSelection = ["rock", "paper", "scissors"];
+        let compChoice = compSelection[Math.floor(Math.random() * compSelection.length)];
+        
+
+        console.log('You chose: ' + userSelection + ' And your opponent chose: ' + compChoice + '.');
+        i++;
+
+      
+        if (userSelection == 'rock' && compChoice == 'rock') {
+            console.log("It's a tie!");
+        } else if (userSelection == 'paper' && compChoice == 'paper') {
+            console.log("It's a tie!");
+        } else if (userSelection == 'scissors' && compChoice == 'scissors') {
+            console.log("It's a tie!");
+        } else if (userSelection == 'paper' && compChoice == 'rock') {
+            console.log("Paper covers rock! You win!");
+        } else if (userSelection == 'rock' && compChoice == 'paper') {
+            console.log("Your rock's been covered. You lose!");
+        } else if (userSelection == 'scissors' && compChoice == 'paper') {
+            console.log("Slices of paper rain everywhere! You win!");
+        } else if (userSelection == 'paper' && compChoice == 'scissors') {
+            console.log("Say goodbye to your paper! You lose!");
+        } else if (userSelection == 'rock' && compChoice == 'scissors') {
+            console.log('You smashed those scissors and won!');
+        } else if (userSelection == 'scissors' && compChoice == 'rock') {
+            console.log('Your scissors were crushed! You lose!');
+        } else console.log("Please enter either rock, paper, or scissors.");
+
+    }
+
+    </script>
+
+</body>
+</html>
